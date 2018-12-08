@@ -9,7 +9,7 @@ class Api::SessionsController < ApplicationController
     if @user
       login!(@user)
     else
-      render json: @user.errors.full_messages, status: 418
+      render json: ["Invalid credentials"], status: 418
     end
   end
 

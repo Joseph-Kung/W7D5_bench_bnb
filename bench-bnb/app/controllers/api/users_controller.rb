@@ -5,6 +5,7 @@ class Api::UsersController < ApplicationController
     if @user.save
       render json: @user
     else
+      debugger;
       render json: @user.errors.full_messages, status: 418
     end
   end
